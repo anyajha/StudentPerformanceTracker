@@ -1,0 +1,52 @@
+/* src/app/components/admin-dashboard/admin-dashboard.scss */
+:host { display: block; }
+/* Header / KPI row */
+.header {
+ padding: clamp(16px, 2.5vw, 32px);
+ padding-bottom: 0;
+}
+.header .kpis {
+ display: grid;
+ gap: 14px;
+ grid-template-columns: repeat(3, minmax(220px, 1fr));
+ @media (max-width: 1000px) {
+   grid-template-columns: 1fr;
+ }
+}
+.kpi {
+ background: linear-gradient(180deg, #ffffff, #f7f9ff);
+ border-radius: 16px;
+ box-shadow: var(--shadow);
+ padding: 16px;
+}
+.kpi .label { color: var(--muted); font-size: 12px; margin-bottom: 6px; }
+.kpi .value { font-size: 28px; font-weight: 800; }
+/* Main content cards */
+.content {
+ padding: clamp(16px, 2.5vw, 32px);
+ display: grid;
+ gap: 20px;
+}
+.card {
+ background: #fff;
+ border-radius: 16px;
+ box-shadow: var(--shadow);
+ padding: 16px;
+}
+/* Filters/Chips */
+.filters {
+ display: flex;
+ gap: 10px;
+ flex-wrap: wrap;
+ align-items: center;
+}
+.filters .chip {
+ padding: 6px 10px;
+ border-radius: 999px;
+ background: #f1f3ff;
+ color: var(--primary);
+ cursor: pointer;
+ user-select: none;
+}
+.filters .chip:hover { filter: brightness(.97); }
+.filters .chip.active { background: var(--primary); color: #fff; }

@@ -1,0 +1,48 @@
+.teacher-dashboard {
+ max-width: 900px;
+ margin: 30px auto;
+ padding: 20px;
+ font-family: 'Segoe UI', sans-serif;
+ h2 {
+   text-align: center;
+   margin-bottom: 25px;
+   color: #343434;
+ }
+ h3 {
+   margin-top: 25px;
+   margin-bottom: 10px;
+   color: #623528;
+ }
+ form {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 15px;
+   margin-bottom: 20px;
+   input, select {
+     padding: 10px;
+     border: 1px solid #aaa;
+     border-radius: 6px;
+     flex: 1;
+     min-width: 150px;
+   }
+   button {
+     padding: 10px 20px;
+     background: #956643;
+     color: #fff;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+     transition: background 0.2s;
+&:hover {
+       background: #623528;
+     }
+   }
+ }
+ ul {
+   margin: 10px 0 20px 20px;
+   li {
+     margin-bottom: 5px;
+     color: #343434;
+   }
+ }
+}

@@ -1,0 +1,38 @@
+<div class="teacher-dashboard">
+<h2>Teacher Dashboard</h2>
+<!-- <button class="logout-btn" (click)="logout()">logout</button> -->
+
+<!-- Add Subject -->
+<h3>Add Subject</h3>
+<form (ngSubmit)="addSubject()" [formGroup]="addSubjectForm">
+<input type="text" formControlName="name" placeholder="Subject Name*" />
+<button type="submit">Add</button>
+</form>
+
+
+<!-- <h4>My Subjects</h4>
+<ul>
+<li *ngFor="let s of subjects">{{ s.name }}</li>
+</ul> -->
+
+<!-- Enter Marks -->
+<h3>Enter Marks</h3>
+<form (ngSubmit)="enterMarks()" [formGroup]="marksForm" class="form-inline">
+<input type="number" formControlName="studentId" placeholder="Student ID*" />
+<input type="text" formControlName="subjectName" placeholder="Subject Name*" />
+<input type="text" formControlName="term" placeholder="Term*" />
+<input type="number" formControlName="marks" placeholder="Marks*" />
+<button type="submit">Save Marks</button>
+</form>
+<!-- Mark Attendance -->
+<h3>Mark Attendance</h3>
+<form (ngSubmit)="markAttendance()" [formGroup]="attendanceForm" class="form-inline">
+<input type="number" formControlName="studentId" placeholder="Student ID*" />
+<input type="date" formControlName="date" />
+<select formControlName="isPresent">
+<option [value]="true">Yes</option>
+<option [value]="false">No</option>
+</select>
+<button type="submit">Save Attendance</button>
+</form>
+</div>

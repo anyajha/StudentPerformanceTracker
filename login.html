@@ -1,0 +1,23 @@
+<div class="login-page">
+<mat-card class="login-card">
+<h2 class="title">Login</h2>
+<form [formGroup]="form" (ngSubmit)="submit()" class="form">
+<mat-form-field appearance="outline">
+<mat-label>Username</mat-label>
+<input matInput formControlName="username" autocomplete="username" />
+</mat-form-field>
+<mat-form-field appearance="outline">
+<mat-label>Password</mat-label>
+<input matInput type="password" formControlName="password" autocomplete="current-password" />
+</mat-form-field>
+<div class="actions">
+<button mat-raised-button color="primary" type="submit" [disabled]="submitting || form.invalid">
+         Login
+</button>
+<button mat-stroked-button color="accent" type="button" routerLink="/signup">
+         Create account
+</button>
+</div>
+</form>
+</mat-card>
+</div>

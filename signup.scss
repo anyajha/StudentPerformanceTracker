@@ -1,0 +1,79 @@
+:host { display: block; }
+/* same container class as login.html */
+.login-page {
+ min-height: 100dvh;
+ display: grid;
+ place-items: center;
+ padding: 24px;
+ /* baby pink background */
+ background:
+   radial-gradient(1000px 600px at 10% -10%, #ffe4e6 0, transparent 60%),
+   radial-gradient(900px 500px at 120% 0%, #fbcfe8 0, transparent 55%),
+   #fce7f3;
+}
+/* same card class as login.html */
+.login-card {
+ width: min(500px, 92vw);
+ padding: 28px 26px 22px;
+ border-radius: 14px;
+ background: #f5f5dc;         /* beige card */
+ box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+ border: 2px solid #e5e7eb;    /* thicker border */
+}
+.title {
+ margin: 0 0 20px;
+ font-size: 28px;
+ font-weight: 700;
+ text-align: center;
+ color: #7c2d12;               /* warm heading color */
+}
+.form {
+ display: grid;
+ gap: 18px;
+}
+/* thicker outlined fields + inner padding space (same as login) */
+mat-form-field { width: 100%; }
+::ng-deep .mat-mdc-text-field-wrapper.mdc-text-field--outlined {
+ border-width: 2px !important;
+ border-radius: 8px;
+ padding-left: 6px;
+ padding-right: 6px;
+ background: #fff;             /* crisp input background on beige card */
+}
+/* actions row matches login layout */
+.actions {
+ display: flex;
+ justify-content: space-between;
+ margin-top: 10px;
+ gap: 16px;
+}
+/* primary = Create account (boxed, pink) */
+button[mat-raised-button] {
+ flex: 1;
+ font-weight: 600;
+ font-size: 15px;
+ padding: 12px;
+ border-radius: 8px;
+ background: #ec4899;          /* hot pink */
+ color: #fff;
+ box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+ border: 2px solid #db2777;
+ transition: all 0.15s ease;
+}
+button[mat-raised-button]:hover {
+ background: #db2777;
+ transform: translateY(-1px);
+ box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+/* secondary = Back to login (outlined) */
+button[mat-stroked-button] {
+ flex: 1;
+ font-weight: 600;
+ font-size: 15px;
+ padding: 12px;
+ border-radius: 8px;
+ border-width: 2px !important;
+}
+button[mat-stroked-button]:hover {
+ background: #fef3f5;
+}
